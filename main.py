@@ -37,9 +37,7 @@ def get_weather(region):
                       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
     }
     key = config["weather_key"]
-    region = "北京市"
-    key = "1d72439b5bd54ea5a1601ebd6cc0f3c0"
-    region_url = "https://geoapi.qweather.com/v2/city/lookup?location={}&key={}".format(region, key)
+    region_url = "https://geoapi.qweather.com/v2/city/lookup?location=%E5%8C%97%E4%BA%AC%E5%B8%82&key=1d72439b5bd54ea5a1601ebd6cc0f3c0"
     response = get(region_url, headers=headers).json()
     if response["code"] == "404":
         print("推送消息失败，请检查地区名是否有误！")
